@@ -6,9 +6,8 @@ export default function Product({ id, title, image, price, rating }) {
   const [{ basket }, dispatch] = useStateValue();
   console.log("This is the new basket>>>", basket);
   const addToBasket = () => {
-    //dispatch the item into the data layer
     dispatch({
-      type: "ADD TO BASKET",
+      type: "ADD_TO_BASKET",
       item: {
         id: id,
         title: title,
